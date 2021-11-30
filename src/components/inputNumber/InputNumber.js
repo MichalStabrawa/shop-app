@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./inputNumber.module.scss";
 
 const InputNumber = (props) => {
   const handleClickDown = (e) => {
@@ -14,7 +15,7 @@ const InputNumber = (props) => {
   };
 
   return (
-    <div className="number-input">
+    <div className={styles.numberinput}>
       <button onClick={handleClickDown}></button>
       <input
         className="quantity"

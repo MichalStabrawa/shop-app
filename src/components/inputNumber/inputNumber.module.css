@@ -1,7 +1,3 @@
-body {
-  background: red;
-}
-
 input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -13,17 +9,18 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-.number-input {
+.numberinput {
   border: 2px solid #ddd;
   display: inline-flex;
+  border-radius: 8px;
 }
 
-.number-input,
-.number-input * {
+.numberinput,
+.numberinput * {
   box-sizing: border-box;
 }
 
-.number-input button {
+.numberinput button {
   outline: none;
   -webkit-appearance: none;
   background-color: transparent;
@@ -37,7 +34,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
 }
 
-.number-input button:after {
+.numberinput button:after {
   display: inline-block;
   position: absolute;
   font-family: "Font Awesome 5 Free";
@@ -46,11 +43,11 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: translate(-50%, -50%) rotate(180deg);
 }
 
-.number-input button.plus:after {
+.numberinput button.plus:after {
   transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.number-input input[type="number"] {
+.numberinput input[type="number"] {
   font-family: sans-serif;
   max-width: 5rem;
   padding: 0.5rem;
