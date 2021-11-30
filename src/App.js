@@ -1,11 +1,17 @@
 import "./App.css";
 import React from "react";
-import InputNumber from "./components/inputNumber/InputNumber";
+import Cart from "./components/cart/Cart";
 
 function App() {
   return (
     <div className="App">
-      <InputNumber />
+      <div className="wrapper">
+        <div className="wrapper-background"></div>
+        <div className="wrapper-card">
+          <Cart />
+        </div>
+      </div>
+      <Cart />
     </div>
   );
 }

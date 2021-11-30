@@ -1,14 +1,16 @@
 import React from "react";
 
-const InputNumber = () => {
+const InputNumber = (props) => {
   const handleClickDown = (e) => {
     const findInput = e.target.nextSibling;
     findInput.stepDown();
+    props.setCountDown();
   };
 
   const handleClickUp = (e) => {
     const findInputLast = e.target.previousSibling;
     findInputLast.stepUp();
+    props.setCountUp();
   };
 
   return (
