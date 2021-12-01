@@ -16,7 +16,11 @@ const InputNumber = (props) => {
 
   return (
     <div className={styles.numberinput}>
-      <button onClick={handleClickDown}></button>
+      <button
+        onClick={handleClickDown}
+        disabled={props.count === 1 ? "disabled" : null}
+        className={styles.minus}
+      ></button>
       <input
         className="quantity"
         type="number"
@@ -24,7 +28,11 @@ const InputNumber = (props) => {
         min="1"
         max="9"
       />
-      <button onClick={handleClickUp} className={styles.plus}></button>
+      <button
+        onClick={handleClickUp}
+        className={styles.plus}
+        disabled={props.count > 9 ? "disabled" : null}
+      ></button>
     </div>
   );
 };

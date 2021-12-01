@@ -22,8 +22,13 @@ const Cart = (props) => {
         <p>Pattern {props.pattern}</p>
         <div className="cart-count-wrapper">
           <div>
+            {`Count ${count}`}
             <span>Qty:</span>
-            <InputNumber setCountUp={setCountUp} setCountDown={setCountDown} />
+            <InputNumber
+              setCountUp={setCountUp}
+              setCountDown={setCountDown}
+              count={count}
+            />
           </div>
           <span className="price">{props.price}</span>
         </div>
