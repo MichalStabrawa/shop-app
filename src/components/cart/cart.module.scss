@@ -2,8 +2,7 @@
 @import "../../scss/utils";
 .cartWrapper {
     border-bottom: 2px solid $gray;
-    width: 36%;
-    padding: $indents10 0 $indents20 0;
+    padding: $indents10 $indents20 $indents20 $indents20;
     .cartContent {
         .cartContentTitle {
             margin: 0;
