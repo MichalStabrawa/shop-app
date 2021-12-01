@@ -1,5 +1,4 @@
-@import "../../scss/_colors";
-@import "../../scss/utils";
+@import "../../scss/base";
 input[type="number"] {
     -webkit-appearance: textfield;
     -moz-appearance: textfield;
@@ -72,13 +71,4 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size: 14px;
     height: 30px;
     text-align: center;
-}
-
-.cart-wrapper {
-    padding: $indents20 0;
-    .cart-content {
-        &__title {
-            margin: 0;
-        }
-    }
 }
