@@ -24,7 +24,7 @@ const InputNumber = (props) => {
         min="1"
         max="9"
       />
-      <button onClick={handleClickUp} className="plus"></button>
+      <button onClick={handleClickUp} className={styles.plus}></button>
     </div>
   );
 };
