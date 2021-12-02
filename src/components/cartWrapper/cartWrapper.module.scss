@@ -1,0 +1,26 @@
+@import "../../scss/base.scss";
+.cartMain {
+    border: 2px solid $gray;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.cartCount {
+    padding: $indents20 0;
+    border-bottom: 2px solid $gray;
+}
+
+.cartCountTitle {
+    font-size: $fontSize28;
+    font-weight: bold;
+}
+
+.cartContent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.cartOrderTotal {
+    padding: $indents20 0;
+}

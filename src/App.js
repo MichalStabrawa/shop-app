@@ -1,6 +1,6 @@
 import styles from "./App.module.scss";
 import React from "react";
-import Cart from "./components/cart/Cart";
+import CartWrapper from "./components/cartWrapper/CartWrapper";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <div className={styles.wrapper}>
         <div className={styles.wrapperBackground}></div>
         <div className={styles.wrapperCard}>
-          <Cart />
+          <CartWrapper />
         </div>
       </div>
     </div>

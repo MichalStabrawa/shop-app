@@ -1,4 +1,10 @@
 @import "../../scss/base.scss";
 .buttonDefault {
+    height: $indents40;
     background: $violet;
+    width: 100%;
+    color: $white;
+    font-size: $fontSize28;
+    font-weight: bold;
+    border: none;
 }
