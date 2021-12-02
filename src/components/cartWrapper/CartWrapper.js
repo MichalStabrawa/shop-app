@@ -4,6 +4,7 @@ import Button from "../button/Button";
 
 import Cart from "../cart/Cart";
 
+const d = "aa";
 const CartWrapper = (props) => {
   return (
     <div className={styles.cartMain}>
