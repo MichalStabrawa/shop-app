@@ -16,14 +16,14 @@ const Cart = (props) => {
   return (
     <div className={styles.cartWrapper}>
       <div className={styles.cartImg}>
-        <img src={props.src} alt="" />
+        <img src={props.src} className={styles.imgProduct} alt="" />
       </div>
-      <div className="cart-content">
-        <h2 class={styles.cartContentTitle}>{props.name}</h2>
+      <div className={styles.cartContent}>
+        <h2 className={styles.cartContentTitle}>{props.name}</h2>
         <p>Size {props.size}</p>
         <p>Color {props.color}</p>
         <p>Pattern {props.pattern}</p>
-        <div className="cart-count-wrapper">
+        <div className={styles.cartCOntentWrapper}>
           <div>
             {`Count ${count}`}
             <span>Qty:</span>

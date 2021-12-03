@@ -3,9 +3,17 @@
 .cartWrapper {
     border-bottom: 2px solid $gray;
     padding: $indents10 $indents20 $indents20 $indents20;
+    display: flex;
     .cartContent {
         .cartContentTitle {
             margin: 0;
         }
+    }
+    .cartImg {
+        width: 150px;
+        height: auto;
+    }
+    .imgProduct {
+        width: 100%;
     }
 }
