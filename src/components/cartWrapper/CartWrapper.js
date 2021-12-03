@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./cartWrapper.module.scss";
 import Button from "../button/Button";
+import GetData from "../../data/data.json";
 
 import Cart from "../cart/Cart";
 
-const d = "aa";
+const d = JSON.parse(GetData);
 const CartWrapper = (props) => {
   return (
     <div className={styles.cartMain}>
