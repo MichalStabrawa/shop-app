@@ -47,8 +47,11 @@ const CartWrapper = (props) => {
                 price={el.price.current_price}
                 oldprice={el.price.old_price}
                 size={option > 0 ? el.product_options[0].value : null}
+                sizeName={option > 0 ? el.product_options[0].name : null}
+                colorName={option > 1 ? el.product_options[1].name : null}
                 currency={currency}
                 color={option > 1 ? el.product_options[1].value : null}
+                patternName={option > 2 ? el.product_options[2].name : null}
                 pattern={option > 2 ? el.product_options[2].value : null}
               />
             );
