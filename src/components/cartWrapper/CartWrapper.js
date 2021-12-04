@@ -36,7 +36,22 @@ const CartWrapper = (props) => {
         <div></div>
         {state &&
           state.items.map((el, i) => {
-            return <Cart key={i} name={el.product_name} src={el.image} />;
+            let option = el.product_options.length;
+            let currency = state.currency;
+            console.log(currency);
+            return (
+              <Cart
+                key={i}
+                name={el.product_name}
+                src={el.image}
+                price={el.price.current_price}
+                oldprice={el.price.old_price}
+                size={option > 0 ? el.product_options[0].value : null}
+                currency={currency}
+                color={option > 1 ? el.product_options[1].value : null}
+                pattern={option > 2 ? el.product_options[2].value : null}
+              />
+            );
           })}
         <div className={styles.cartOrderTotal}>
           <Button />

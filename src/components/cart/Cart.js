@@ -33,7 +33,12 @@ const Cart = (props) => {
               count={count}
             />
           </div>
-          <span className="price">{props.price}</span>
+          <span>
+            Old price {props.currency} <s>{props.oldprice}</s>
+          </span>
+          <span className="price">
+            Currently price {props.currency} {props.price}
+          </span>
         </div>
       </div>
     </div>
