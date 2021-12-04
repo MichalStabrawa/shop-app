@@ -5,42 +5,39 @@ import Button from "../button/Button";
 import Cart from "../cart/Cart";
 
 const CartWrapper = (props) => {
-  const [data, setData] = useState([]);
+  const [state, setState] = useState([]);
 
-  const getData = () => {
-    fetch("data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        console.log(response);
-        return response.json();
-      })
-      .then(function (myJson) {
-        console.log(myJson);
-        setData(myJson);
-      });
+  const fetchData = async () => {
+    let data;
+    try {
+      const json = await fetch("data.json");
+      data = await json.json();
+    } catch (e) {
+      if (e.message) {
+        console.log(e.message);
+      }
+    } finally {
+      setState(() => data);
+    }
   };
+
   useEffect(() => {
-    getData();
+    fetchData();
   }, []);
+
+  const a = state.items;
 
   return (
     <div className={styles.cartMain}>
       <div className={styles.cartCount}>
-        <span className={styles.cartCountTitle}>
-          Cart({[data.items].length})
-        </span>
+        <span className={styles.cartCountTitle}>Cart()</span>
       </div>
       <div className={styles.cartContent}>
-        <div>
-          {data &&
-            data.items.map((item, index) => (
-              <Cart name={item.product_name} src={item.image} key={index} />
-            ))}
-        </div>
+        <div>{state.currency}</div>
+        {state &&
+          state.items.map((el, i) => {
+            <Cart key={i} name={el.id} />;
+          })}
         <div className={styles.cartOrderTotal}>
           <Button />
         </div>
