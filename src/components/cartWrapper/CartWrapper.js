@@ -25,8 +25,6 @@ const CartWrapper = (props) => {
     fetchData();
   }, []);
 
-  const a = state.items;
-
   return (
     <div className={styles.cartMain}>
       <div className={styles.cartCount}>
@@ -34,10 +32,7 @@ const CartWrapper = (props) => {
       </div>
       <div className={styles.cartContent}>
         <div>{state.currency}</div>
-        {state &&
-          state.items.map((el, i) => {
-            <Cart key={i} name={el.id} />;
-          })}
+
         <div className={styles.cartOrderTotal}>
           <Button />
         </div>
