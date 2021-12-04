@@ -28,7 +28,9 @@ const CartWrapper = (props) => {
   return (
     <div className={styles.cartMain}>
       <div className={styles.cartCount}>
-        <span className={styles.cartCountTitle}>Cart()</span>
+        <span className={styles.cartCountTitle}>
+          Cart{`(${state.items.length})`}
+        </span>
       </div>
       <div className={styles.cartContent}>
         <div>{state.currency}</div>
