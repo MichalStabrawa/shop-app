@@ -25,7 +25,7 @@ const CartWrapper = (props) => {
     fetchData();
   }, []);
 
-  return (
+  return state && state.items ? (
     <div className={styles.cartMain}>
       <div className={styles.cartCount}>
         <span className={styles.cartCountTitle}>
@@ -33,14 +33,17 @@ const CartWrapper = (props) => {
         </span>
       </div>
       <div className={styles.cartContent}>
-        <div>{state.currency}</div>
-
+        <div></div>
+        {state &&
+          state.items.map((el, i) => {
+            return <Cart key={i} name={el.product_name} src={el.image} />;
+          })}
         <div className={styles.cartOrderTotal}>
           <Button />
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default CartWrapper;
