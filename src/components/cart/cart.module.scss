@@ -6,6 +6,8 @@
     display: flex;
     .cartContent {
         padding-left: $indents40;
+        padding-right: 0;
+        background: red;
         .cartContentTitle {
             margin: 0;
         }
