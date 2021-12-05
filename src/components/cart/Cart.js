@@ -20,10 +20,16 @@ const Cart = (props) => {
       </div>
       <div className={styles.cartContent}>
         <h2 className={styles.cartContentTitle}>{props.name}</h2>
-        <p>Size {props.size}</p>
-        <p>Color {props.color}</p>
-        <p>Pattern {props.pattern}</p>
-        <div className={styles.cartCOntentWrapper}>
+        <p>
+          {props.sizeName} {props.size}
+        </p>
+        <p>
+          {props.colorName} {props.color}
+        </p>
+        <p>
+          {props.patternName} {props.pattern}
+        </p>
+        <div className="test">
           <div>
             {`Count ${count}`}
             <span>Qty:</span>
@@ -33,7 +39,18 @@ const Cart = (props) => {
               count={count}
             />
           </div>
-          <span className="price">{props.price}</span>
+          <div>
+            <p>
+              {props.oldprice ? (
+                <span>
+                  {props.currency} <s>{props.oldprice}</s>
+                </span>
+              ) : null}
+            </p>
+            <span className="price">
+              {props.currency} {props.price}
+            </span>
+          </div>
         </div>
       </div>
     </div>
