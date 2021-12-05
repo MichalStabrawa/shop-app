@@ -29,7 +29,7 @@ const Cart = (props) => {
         <p>
           {props.patternName} {props.pattern}
         </p>
-        <div className={styles.cartCOntentWrapper}>
+        <div className="test">
           <div>
             {`Count ${count}`}
             <span>Qty:</span>
@@ -39,7 +39,7 @@ const Cart = (props) => {
               count={count}
             />
           </div>
-          <span>
+          <div>
             <p>
               {props.oldprice ? (
                 <span>
@@ -47,10 +47,10 @@ const Cart = (props) => {
                 </span>
               ) : null}
             </p>
-          </span>
-          <span className="price">
-            {props.currency} {props.price}
-          </span>
+            <span className="price">
+              {props.currency} {props.price}
+            </span>
+          </div>
         </div>
       </div>
     </div>
