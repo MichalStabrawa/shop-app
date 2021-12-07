@@ -4,10 +4,10 @@
     border-bottom: 2px solid $gray;
     padding: $indents10 $indents20 $indents20 $indents20;
     display: flex;
+    position: relative;
     .cartContent {
         padding-left: $indents40;
         padding-right: 0;
-        background: red;
         .cartContentTitle {
             margin: 0;
         }
@@ -28,4 +28,8 @@
 
 .cartContentWrapper {
     display: flex;
+}
+
+.hide {
+    display: none;
 }
