@@ -5,7 +5,7 @@ import ButtonClose from "../buttonClose/ButtonClose";
 
 const Cart = (props) => {
   const [count, setCount] = useState(0);
-  const [state, setState] = useState(true);
+  const [show, setShow] = useState(true);
 
   const setCountUp = () => {
     setCount(count + 1);
@@ -17,11 +17,11 @@ const Cart = (props) => {
 
   const hideCart = () => {
     // eslint-disable-next-line no-const-assign
-    setState(false);
+    setShow(false);
   };
 
-  return (
-    <div className={state ? styles.cartWrapper : styles.hide}>
+  return show ? (
+    <div className={styles.cartWrapper}>
       <ButtonClose hide={hideCart} />
       <div className={styles.cartImg}>
         <img src={props.src} className={styles.imgProduct} alt="" />
@@ -62,7 +62,7 @@ const Cart = (props) => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Cart;
