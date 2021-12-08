@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./cartWrapper.module.scss";
 import Button from "../button/Button";
+import ButtonClose from "../buttonClose/ButtonClose";
 
 import Cart from "../cart/Cart";
 
@@ -31,6 +32,7 @@ const CartWrapper = (props) => {
         <span className={styles.cartCountTitle}>
           Cart{`(${state.items.length})`}
         </span>
+        <ButtonClose />
       </div>
       <div className={styles.cartContent}>
         <div></div>
