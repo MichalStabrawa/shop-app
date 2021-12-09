@@ -22,7 +22,7 @@ const Cart = (props) => {
 
   return show ? (
     <div className={styles.cartWrapper}>
-      <ButtonClose hide={hideCart} />
+      <ButtonClose hideComponent={hideCart} />
       <div className={styles.cartImg}>
         <img src={props.src} className={styles.imgProduct} alt="" />
       </div>

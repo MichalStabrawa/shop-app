@@ -7,6 +7,8 @@ import Cart from "../cart/Cart";
 
 const CartWrapper = (props) => {
   const [state, setState] = useState([]);
+  // eslint-disable-next-line no-unused-vars
+  const [hide, setHide] = useState(true);
 
   const fetchData = async () => {
     let data;
@@ -26,16 +28,19 @@ const CartWrapper = (props) => {
     fetchData();
   }, []);
 
-  return state && state.items ? (
+  const hideCartHandle = () => {
+    setHide(hide === false);
+  };
+
+  return state && state.items && hide ? (
     <div className={styles.cartMain}>
       <div className={styles.cartCount}>
         <span className={styles.cartCountTitle}>
           Cart{`(${state.items.length})`}
         </span>
-        <ButtonClose />
+        <ButtonClose hideComponent={hideCartHandle} />
       </div>
       <div className={styles.cartContent}>
-        <div></div>
         {state &&
           state.items.map((el, i) => {
             let option = el.product_options.length;
