@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import InputNumber from "../inputNumber/InputNumber";
 import styles from "../cart/cart.module.scss";
+import ButtonClose from "../buttonClose/ButtonClose";
 
 const Cart = (props) => {
   const [count, setCount] = useState(0);
+  const [show, setShow] = useState(true);
 
   const setCountUp = () => {
     setCount(count + 1);
@@ -13,8 +15,14 @@ const Cart = (props) => {
     setCount(count - 1);
   };
 
-  return (
+  const hideCart = () => {
+    // eslint-disable-next-line no-const-assign
+    setShow(false);
+  };
+
+  return show ? (
     <div className={styles.cartWrapper}>
+      <ButtonClose hideComponent={hideCart} />
       <div className={styles.cartImg}>
         <img src={props.src} className={styles.imgProduct} alt="" />
       </div>
@@ -54,7 +62,7 @@ const Cart = (props) => {
         </div>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Cart;

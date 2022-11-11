@@ -6,8 +6,13 @@
 }
 
 .cartCount {
-    padding: $indents20 0;
+    padding: $indents20 $indents20;
     border-bottom: 2px solid $gray;
+    display: flex;
+    .closeWrapper {
+        position: static;
+        right: 40px;
+    }
 }
 
 .cartCountTitle {
